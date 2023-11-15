@@ -1,0 +1,28 @@
+:root {
+  /* Main color */
+
+  /* black */
+  --main-black: #000000;
+  --main-black-50: #535353;
+
+  /* gray */
+  --main-gray: #dddddd;
+  --main-gray-90: #dddee1;
+  --main-gray-30: #f0f1f1;
+
+  /* white */
+  --main-white: #ffffff;
+
+  /* ivory */
+  --main-ivory: #f9f9f9;
+
+  /* orange */
+  --main-orange: #fa7300;
+  --main-orange-50: #fa9b4a;
+
+  /* yellow */
+  --main-yellow: #f9bd24;
+
+  /* blue */
+  --main-blue: #6284ff;
+}

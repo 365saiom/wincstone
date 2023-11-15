@@ -1,0 +1,244 @@
+/* 전체 Layout(width: 1920px, height: 684px), flex를 사용한 정렬 */
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 1920px;
+  height: 684px;
+  background-color: var(--main-ivory);
+  padding: 100px;
+  box-sizing: border-box;
+}
+
+/* '윙크스톤 투자 상품' 제목  */
+main > h1 {
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 20px;
+  /* padding-left: 100px; */
+}
+
+/* 카드 리스트 flex를 통한 수평 정렬 */
+main > .wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+/* 카드 리스트별 Layout(width:314px, height: 380px */
+.slide {
+  position: relative;
+  width: 314px;
+  height: 380px;
+  border: 1px solid var(--main-gray);
+  border-radius: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-right: 10px;
+
+  /* 마우스 호버 시, 카드가 올라가는 효과 */
+  transition: 0.4s;
+  bottom: 0px;
+}
+
+/* 마우스 호버 시, 카드 올라가는 효과, 마우스 커서 변경 */
+.slide:hover {
+  bottom: 20px;
+  cursor: pointer;
+}
+
+/* 카드 상단 아이템 flex를 사용한 정렬 */
+.slide > .state {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.3rem;
+  font-size: 0.8rem;
+}
+
+/* 카드 상단 첫번쨰 아이템의 아이콘 style 변경 */
+.slide > .state > .item1 > .material-symbols-outlined {
+  /* 아이콘 색상 전체 채우기 */
+  font-variation-settings: "FILL" 100;
+  font-size: 18px;
+}
+
+/* 카드 상단 첫번쨰 아이템 */
+.slide > .state > .item1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--main-yellow);
+  border-radius: 10px;
+  padding: 3px 12px 3px 12px;
+  color: var(--main-black-50);
+}
+
+.slide > .state > .item1 > p {
+  font-weight: 600;
+}
+
+/* 카드 상단 두번쨰 아이템 */
+.slide > .state > .item2 {
+  border-radius: 10px;
+  color: var(--main-white);
+  background-color: var(--main-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 12px 3px 12px;
+}
+
+/* 카드 제목 */
+.slide > .title {
+  font-size: 1.28rem;
+  font-weight: 700;
+  margin-bottom: 1.3rem;
+}
+
+/* 카드 세부 내용(수익률, 투자기간) flex 정렬 */
+.slide > .detail {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.slide > .detail > div {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 100%;
+}
+
+.slide > .detail > div > p {
+  font-size: 1rem;
+  font-size: 1.2rem;
+}
+
+.slide > .detail > div > p:first-child {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* 강조 bold text */
+.slide > .detail > div > p:last-child {
+  font-size: 1.28rem;
+  font-weight: 500;
+}
+
+/* 구분선 */
+.slide > hr {
+  background: var(--main-gray);
+  height: 1px;
+  border: 0;
+}
+
+/* 모집금액 */
+.slide > .price {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.slide > .price > p:first-child {
+  margin-bottom: 1rem;
+}
+
+/* 강조 bold text */
+.slide > .price > p:last-child {
+  font-size: 1.28rem;
+  font-weight: 500;
+}
+
+/* flex 사용한 오른쪽 정렬 */
+.slide > .percent {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* 강조 bold text  */
+.slide > .percent > p {
+  color: var(--main-orange-50);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* 퍼센트 테두리 바 */
+.slide > .percent > .bar {
+  height: 0.7rem;
+  border: 1px solid var(--main-gray);
+  background-color: var(--main-gray-30);
+  border-radius: 3px;
+  width: 100%;
+}
+
+/* 퍼센트 나타내는 바 */
+.slide > .percent > .bar > span {
+  float: left;
+  background: linear-gradient(90deg, var(--main-white), var(--main-orange-50));
+  /* 퍼센트 만큼 width 나타내기 */
+  width: 70%;
+  height: 0.7rem;
+  border-radius: 3px;
+}
+
+/* "상세보기" 버튼 */
+.slide > button {
+  width: 100%;
+  border: 1.3px solid var(--main-orange-50);
+  background-color: var(--main-white);
+  height: 35px;
+  border-radius: 5px;
+  color: var(--main-orange-50);
+  font-weight: 600;
+}
+
+/* 두번째 슬라이드 */
+
+.slide2 > .state > .item2 {
+  background-color: var(--main-yellow);
+}
+
+.slide2 > .percent > p {
+  color: var(--main-black);
+}
+
+.slide2 > .percent > .bar > span {
+  width: 0%;
+}
+
+/* 세번째 슬라이드 */
+
+.slide3 > .state > .item2 {
+  background-color: var(--main-orange);
+}
+
+.slide3 > .percent > .bar > span {
+  width: 100%;
+}
+
+/* 767px 이하일 때, 반응형 */
+@media screen and (max-width: 767px) {
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+
+  main > h1 {
+    align-items: center;
+  }
+
+  /* flex를 사용한 세로 정렬 */
+  main > .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
