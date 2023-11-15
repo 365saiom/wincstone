@@ -195,26 +195,31 @@ main > .wrapper {
   font-weight: 600;
 }
 
-/* 두번째 슬라이드 */
+/* 두번째 카드 수정 */
 
+/* 상단 두번째 아이템 노란색으로 변경 */
 .slide2 > .state > .item2 {
   background-color: var(--main-yellow);
 }
 
+/* 퍼센트 text 검은색으로 색 변경 */
 .slide2 > .percent > p {
   color: var(--main-black);
 }
 
+/* 그라데이션 바 0%로 변경 */
 .slide2 > .percent > .bar > span {
   width: 0%;
 }
 
-/* 세번째 슬라이드 */
+/* 세번째 카드 수정 */
 
+/* 상단 두번째 아이템 주황색으로 변경 */
 .slide3 > .state > .item2 {
   background-color: var(--main-orange);
 }
 
+/* 그라데이션 바 100%로 변경 */
 .slide3 > .percent > .bar > span {
   width: 100%;
 }
@@ -240,5 +245,9 @@ main > .wrapper {
   main > .wrapper {
     flex-direction: column;
     align-items: center;
+  }
+  /* 카드가 부딪치지 않도록 간격 조정 */
+  main > .wrapper > .slide {
+    margin-top: 30px;
   }
 }
